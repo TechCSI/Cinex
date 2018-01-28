@@ -1,0 +1,809 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    min-width: 1080px;
+    width: 100%;
+    height: auto;
+
+    background-image: url('../image/background-single.jpg');
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+
+    background-color: floralwhite;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ 
+/*  go to top  */
+#goto-top-button {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 9999; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-image: url('../image/gototop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+}
+#goto-top-button:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+#top-bar{
+    height: 30px;
+    background-color: orange;
+    color: white;
+    width: 100%;
+    line-height: 30px;
+}
+#top-bar div{
+    float: left;
+    width: 50%;
+
+}
+header{
+    overflow: hidden;
+    width: 100%;
+    z-index: 99;
+    background-image: linear-gradient( rgb(123, 67, 151) 0%, rgb(181, 35, 138) 69%, rgb(200, 26, 38) 99%);
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #000;
+}
+header #logo,#menu,#user,#contact{
+    float: left;
+
+
+
+}
+#logo{
+    width: 15%;
+    font-size: 30px;
+    color:  aquamarine;
+    border-right: solid 2px white ;
+
+}
+#menu{
+    width: 45%;
+    font-size: 25px;
+    border-right: solid 2px white ;
+    line-height: 60px;
+}
+#contact{
+    width: 20%;
+    border-right: solid 2px white ;
+}
+#contact img{
+    height: 50px;
+    width: 50px;
+    margin-top: 5px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+#contact img:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+}
+#user{
+    width: 20%;
+    font-size: 18px;
+
+}
+#user div{
+    width: 50%;
+    float: left;
+
+
+}
+#user #userimg{
+
+    background-image: url('../image/user.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    font-size: 0px;
+}
+#user #userimg a{
+    color: white;
+    font-size: 0px;
+    display:block;
+}
+#user #userimg1{
+
+    background-image: url('../image/user1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    font-size: 0px;
+}
+#user #userimg ul,li{
+    padding: 0px;
+    margin: 0px;
+}
+#user #userimg li{
+    display: block;
+    list-style: none;
+    background-color: orange;
+    color: white;
+    font-size: 14px;
+    height: 30px;
+}
+#user #userimg a{
+    color: white;
+    font-size: 0px;
+    display:block;
+}
+#user #usertext a{
+    color: white;
+    font-size: 22px;
+    display:block;
+}
+#user div a:hover{
+    background-color:rgba(0,0,0,0.2);
+    color: red;
+
+}
+#user #user-detail{
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    font-size: 20px;
+    width: 200px;
+    background-color:orange;
+    color: white;
+    height: 180px;
+
+}
+#user #userimg:hover #user-detail{
+    display: block;
+}
+#main-menu{
+    padding: 0px;
+    margin: 0px;
+}
+#main-menu li{
+    list-style: none;
+    display: inline-block;
+}
+#main-menu a{
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    display: block;
+    text-decoration: none;
+
+}
+#main-menu a:hover{
+    color: blue;
+    text-decoration: underline;
+    transition: 1s;
+}
+/*       							Containt Main   				*/
+#wrapper{
+
+    width: 1280px;
+    width: 100%;
+
+    margin: auto;
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #F5F3EE;
+
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+
+    height: auto;
+}
+#content{
+    margin-top: 10px;
+    background-color: blue;
+    height: 800px;
+    width: 100%;
+    color: #F5F3EE;
+
+}
+#movie{
+    height: 295px;
+    width: 230px;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0px;
+    margin-right: 20px;
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+
+}
+#movie:hover{
+    transition: 0.8s;
+    background-image: linear-gradient( #a5e427,white,#a5e427);
+}
+#movieimg{
+    position: absolute;
+    height: 260px;
+    width: 200px;
+    overflow: hidden;
+
+    background-color: black;
+    border-radius: 10px;
+}
+#movietext{
+    display: none;
+    position: absolute;
+    color: white;
+
+    height: 200px;
+    width: 200px;
+    padding-top: 70px;
+}
+#movietext button{
+    height: 35px;
+    border-radius: 35px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande";
+    font-size: 18px;
+    width: 150px;
+    color: #a5e427;
+    background-color: white;
+    border: 2px solid #a5e427;
+}
+#movietext button:hover{
+    color: white;
+    background-color: #a5e427;
+    border: 2px solid white;
+}
+#movieimg img{
+    height: 200px;
+    width: 200px;
+    border-bottom: 2px solid black;
+}
+#movieimg img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+
+    border-radius: 5px;
+
+}
+#movie:hover #movietext{
+    display: block;
+    opacity: 1;
+    transition: 0.5s;
+}
+#movie:hover img{
+    transform: scale(1.05);
+    transition: 0.5s;
+    opacity: 0.5;
+}
+#imgtext{
+    padding-left: 10px;
+}
+#imgtext label{
+    display: inline-block;
+}
+.moviename{
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1);
+    text-transform: uppercase;
+    font-family: "Lucida Sans Unicode", "Lucida Grande";
+
+    width: 130px;
+}
+.moviecert{
+    font-size: 22px;
+    color:#a5e427;
+    width: 30px;
+}
+.movielang{
+    font-size: 18px;
+    color: #7D1935;
+
+    width: 110px;
+}
+.moviedur{
+    font-size: 18px;
+    color: #7D1935;
+
+    width: 50px;
+}
+.reldate{
+    font-size: 14px;
+    color: lightskyblue;
+
+}
+
+#footer{
+    clear: both;
+    height:auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+
+    background-image:linear-gradient(to right, rgb(123, 67, 151) 0%, rgb(181, 35, 138) 59%, rgb(220, 36, 48) 87%);
+}
+#footer .part{
+    width: 25%;
+    height: 200px;
+    padding: 20px;
+    text-align: left;
+    float: left;
+    background-color: #cdcdcd;
+    color: black;
+    font-size: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px 0 rgba(1,35,138,0.4);
+    border-radius: 5px;
+    font-family: 'ProximaNova-Light', sans-serif;
+    line-height: 22px;
+}
+.part li{
+    list-style: none;
+}
+.part hr{
+    width: 60%;
+    margin: auto;
+
+
+}
+.part h3{
+    text-align: center;
+    margin: 5px;
+}
+#footer .part:hover{
+
+    background-image:linear-gradient( rgb(123, 67, 151) 0%, rgb(181, 35, 138) 59%, rgb(220, 36, 48) 87%);
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+
+    color: white;
+    transition: 0.6s;
+    transform: scale(1.0);
+    overflow: hidden;
+
+}
+#footer form input{
+
+    width: 100%;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 22px;
+    font-size: 14px;
+
+}
+#footer form textarea{
+    width: 100%;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+
+    font-size: 14px;
+    height: 40px;
+}
+#footer form input:focus,textarea:focus{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#footer form #button{
+    text-align: center;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+}
+.clear{
+    clear: both;
+}
+#fixhead{
+    width: 100%;
+    height: 60px;
+}
+
+
+
+
+#top{
+    display: none;
+    z-index: 99;
+    top: 0px;
+    height: 35px;
+    width: 100%;
+    background-color: orange;
+}
+#top li{
+    display: inline-block;
+    width: 150px;
+}
+.movieContainer{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-shadow: 0 10px 20px 0px ;
+
+
+}
+.contentHead{
+    margin-top: 10px;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background-color: lightskyblue;
+    background: linear-gradient(#acacac,#ccaabb);
+    background-image:linear-gradient( rgb(123, 67, 151) 0%, rgb(181, 35, 138) 59%, rgb(220, 36, 48) 87%);
+    border-radius: 5px 5px 0 0;
+}
+.contentList{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 0 0 5px 5px;
+
+}
+
+
+/*  go to top  */
+#goto-top-button {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 9999; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background: url("../image/gototop.png") no-repeat center;
+    background-size: cover;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+}
+#goto-top-button:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+#top-bar{
+    height: 30px;
+    background-color: orange;
+    color: white;
+    width: 100%;
+    line-height: 30px;
+}
+#top-bar div{
+    float: left;
+    width: 50%;
+
+}
+
+/*   Movie Detail   */
+.movieContainer{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-shadow: 0 10px 20px 0px ;
+}
+.contentHead{
+    margin-top: 10px;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background-color: lightskyblue;
+    border-radius: 5px 5px 0 0;
+}
+.contentList{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+
+}
+#content{
+    background-color: pink;
+    min-height: 1000px;
+    overflow:hidden;
+}
+#full{
+    width: 100%;
+    margin-top: 5px;
+    padding: 20px;
+
+
+}
+#full img{
+    margin-left: 50px;
+    width: 250px;
+    height: 350px;
+}
+#full a{
+    display: inline-block;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 25px;
+    background-color: aquamarine;
+    color: #a5e427;
+    text-decoration: none;
+}
+#detail div{
+    float: left;
+
+}
+#full h3{
+    display: inline-block;
+    margin: 5px;
+    width: 200px;
+}
+#full #detail #left{
+    width: 40%;
+}
+#full #detail #right{
+    width: 60%;
+}
+
+/* End of Movie Detail  */
+
+/*  Book.php  */
+#booking{
+    padding: 50px;
+}
+#booking div{
+
+    text-align: center;
+    font-size: 20px;
+}
+#booking select {
+
+    background: transparent;
+    border: none;
+    background-color: #779126;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 300px;
+}
+#booking #submitbutton{
+    display: block;
+    margin-left: 200px;
+    text-align: center;
+    color: yellow;
+    width: 290px;
+    height: 30px;
+
+    border-radius: 30px;
+    background-color:#779126;
+
+
+}
+
+/*  End of Book.php  */
+
+
+/*  Pay online */
+#chkout{
+    padding: 25px;
+    height: 650px;
+    background-color: #ffa;
+
+}
+#chkout div{
+    float: left;
+    width: 50%;
+    padding-left: 100px;
+    font-size: 16px;
+
+}
+#chkout label{
+    display: inline-block;
+    width: 200px;
+}
+#payment form input{
+
+    display: inline-block;
+    width: 250px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 30px;
+    font-size: 14px;
+
+}
+ 
+#payment form input:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#payment form input[type=submit]{
+    
+    float: right;
+    width: 150px;
+    font-size: 22px;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+}
+
+/*******************************************************/
+
+/*   Booking Ticket  */
+#ticket{
+    margin: auto;
+    margin-top: 100px;
+    background-image: url('image/page/booking-form-red-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+
+    border: 2px  white;
+    border-style: dotted solid;
+
+    font-size: 20px;
+
+
+
+}
+#ticket #header{
+    color: white;
+    font-size: 22px;
+    display: block;
+    margin: auto;
+
+}
+#ticket label{
+    display: inline-block;
+    width: 200px;
+}
+#ticket div{
+    padding: 10px;
+
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+#button{
+
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+
+
+
+}
+#button #print{
+    display: block;
+    height: 45px;
+    width: 300px;
+    font-size: 22px;
+    cursor: pointer;
+    color: red;
+    margin: auto;
+    border-radius: 35px;
+    background-image: url('../image/page/tab-unselect.gif');
+    background-position: center;
+    background-size: cover;
+
+}
+
+/****  About Us */
+#aboutus{
+    margin-top: 25px;
+    margin: auto;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    padding-top: 25px;
+    text-align: center;
+
+}
+#aboutus h1{
+
+    font-size: 28px;
+
+}
+#aboutus img{
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+}
+
+/*******************************************/
+
+/*********  Feedback        ******************/
+
+/*******************    This page  csss *****************************/
+
+#feedback{
+
+    margin: auto;
+    margin-top: 25px;
+    width: 800px;
+    padding: 50px;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+#feedback h2{
+    text-align: center;
+    font-size: 28px;
+
+}
+#feedback hr{
+    width: 80%;
+
+}
+#feedback form{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 22px;
+    text-align: center;
+}
+#feedback form label,input,textarea{
+    text-align: left;
+    display: inline-block;
+    width: 200px;
+    margin-right: 50px;
+
+}
+#feedback form input,textarea{
+    margin-top: 10px;
+    background-color: lightblue;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+#feedback form #button{
+    width: 200px;
+    text-align: center;
+    background-color: orange;
+    color: white;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow:   1px 1px 10px 2px;
+}
+
+/*   Form Valid  Color Change  */
+     input:focus:invalid{ /* when a field is considered invalid by the browser */
+
+        box-shadow: 0 0 5px #d45252;
+        border-color: #b03535
+      }
+
+      input:required:valid { /* when a field is considered valid by the browser */
+        box-shadow: 0 0 5px #5cd053;
+        border-color: #28921f;
+      }
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
